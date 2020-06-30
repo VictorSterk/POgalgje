@@ -43,3 +43,7 @@ while True:
                 beurten -= 1
                 renderWoord()
 
+if beurten <= 0:
+        print('Je hebt verlore. Het woord was ' + GeheimWoord)
+        break
+
