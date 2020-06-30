@@ -3,6 +3,7 @@ import random
 Woordlijst = ['informatica', 'informatiekunde', 'spelletje', 'aardigheidje', 'scholier', 'fotografie','waardebepaling', 'specialiteit', 'verzekering', 'universiteit', 'heesterperk' ]
 GeheimWoord = Woordlijst[random.randrange(0, len(Woordlijst))]
 GeradenLetters = []
+beurten = 5
 
 def renderWoord():
         for a in range(len(GeheimWoord)):
@@ -24,3 +25,16 @@ while True:
             if letter in GeheimWoord:
                 print('Die letter zit in het woord')
                 renderWoord()
+
+ else:
+    GeradenLetters += letter
+    if letter in GeheimWoord:
+                print('Die letter zit in het woord')
+                renderWoord()
+
+   else:
+      print('Die letter zit niet in het woord')
+                print('-1')
+                beurten -= 1
+                renderWoord()
+
