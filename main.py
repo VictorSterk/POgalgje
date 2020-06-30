@@ -24,7 +24,12 @@ while True:
             GeradenLetters += letter
             if letter in GeheimWoord:
                 print('Die letter zit in het woord')
+                if checkWin():
                 renderWoord()
+                if checkWin():
+                    print('Je hebt alle letters geraden')
+                    print('Het woord was: ' + GeheimWoord)
+                    break
 
  else:
     GeradenLetters += letter
